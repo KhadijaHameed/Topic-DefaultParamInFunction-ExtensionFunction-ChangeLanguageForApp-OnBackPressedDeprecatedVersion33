@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.75"
+            android:gravity="center"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_gravity="bottom"
+                app:layout_constraintBottom_toTopOf="@+id/textView"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.25"
+            android:background="@color/white">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior=".util.OverScrollBehavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/sign_in_back"
+                        style="@style/medium_text_black"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_23sdp"
+                        android:gravity="bottom"
+                        android:text="@string/control_your_wallet"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_45sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/medium_text_black"
+                            android:text="@string/user_name"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout style="@style/textInputLayout">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_email"
+                                style="@style/medium_edittext"
+                                android:hint="@string/user_name"
+                                android:text=""
+                                android:imeOptions="actionNext"
+                                android:maxLength="30"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            style="@style/medium_text_black"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@string/password"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/textInputLayout">
+                                <!--  app:endIconDrawable="@drawable/custom_pass_toggle" -->
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_password"
+                                style="@style/medium_edittext"
+                                android:hint="@string/password"
+                                android:imeOptions="actionDone"
+                                android:inputType="textPassword"
+                                android:text=""
+                                android:maxLength="30"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/login"
+                            style="@style/medium_text_black"
+                            android:layout_marginTop="@dimen/_25sdp"
+                            android:text="@string/login"
+                            android:textColor="#000" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/forgot_password"
+                                style="@style/normal_text"
+                                android:text="@string/forgot_password" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/reset_password"
+                                style="@style/medium_text_black"
+                                android:layout_alignParentEnd="true"
+                                android:text="@string/reset_here"
+                                android:visibility="visible"
+                                tools:ignore="RelativeOverlap" />
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/normal_text"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            android:gravity="center"
+                            android:text="@string/dont_hv_an_account" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/create_an_account"
+                            style="@style/medium_text_black"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            android:text="@string/create_an_account"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

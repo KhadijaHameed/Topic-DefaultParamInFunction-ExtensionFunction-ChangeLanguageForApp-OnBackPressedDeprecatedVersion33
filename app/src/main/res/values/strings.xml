@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Practice</string>
+    <string name="control_your_wallet">Control your wallet in \n a new way</string>
+    <string name="login_with_email">Login with Email</string>
+    <string name="login_with_google">Login with Google</string>
+    <string name="sign_in">Sign In</string>
+    <string name="user_name">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="reset_here">Reset here</string>
+    <string name="dont_hv_an_account">Don\'t have an account?</string>
+    <string name="create_an_account">create an account</string>
+
+
+</resources>
