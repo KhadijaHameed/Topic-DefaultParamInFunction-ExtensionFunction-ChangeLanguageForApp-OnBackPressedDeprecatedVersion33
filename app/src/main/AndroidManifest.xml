@@ -3,6 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.practice">
 
+    <!--         pkg: Text To Pdf           -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,19 +16,24 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
         android:theme="@style/Theme.Practice"
         tools:targetApi="31">
         <!-- on back pressed deprecated-->
         <activity
-            android:name=".MainActivity"
+            android:name=".textToPdf.MainActivityTextToPdf">
+
+        </activity>
+
+        <activity android:name=".textToPdf.EqualityDoubleTriple"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
 
+        </activity>
+        <activity android:name=".MainActivity"/>
         <activity android:name=".OnBackPressedDeprecatedThirtyThreeActivity"/>
         <activity android:name=".DefaultParamInFunction"/>
         <activity android:name=".ExtensionFunction"/>
@@ -31,6 +41,26 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+
+      <!--  <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzskrieowur498rfdnjfedkjherjht" />-->
+     <!--   <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${API_KEY_SECURE}" />-->
+
+       <!-- <meta-data
+            android:name="com.google.maps_api_key"
+            android:value="${googleMapsApiKey}" />-->
+
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${googleMapsApiKey}" />
+
+
     </application>
 
 </manifest>
